@@ -1,16 +1,22 @@
 import React from "react";
 import MenuModal from "../../organisms/Modal/menu";
 import ModalStore from "../../../store/global/modal";
-import Header from "../../organisms/Header";
+import Layout from "../../layouts";
+import TopSection from "../../organisms/Root/section/top";
+import ServiceSection from "../../organisms/Root/section/service";
+import WorksSection from "../../organisms/Root/section/works";
+import ContactSection from "../../organisms/Root/section/contact";
 
 const Root: React.FC = () => {
   const { isMenuModalOpen } = ModalStore.useContainer();
   return (
-    <div>
-      <Header />
-      <div>aaaa</div>
+    <Layout>
       {isMenuModalOpen() && <MenuModal />}
-    </div>
+      <TopSection />
+      <ServiceSection />
+      <WorksSection />
+      <ContactSection />
+    </Layout>
   );
 };
 

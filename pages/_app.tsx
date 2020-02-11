@@ -3,6 +3,7 @@ import Head from "next/head";
 import React from "react";
 import "ress";
 import ModalStore from "../store/global/modal";
+import MediaStore from "../store/global/media";
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -23,9 +24,11 @@ export default class MyApp extends App {
         <Head>
           <title>Next App</title>
         </Head>
-        <ModalStore.Provider>
-          <Component {...pageProps} />
-        </ModalStore.Provider>
+        <MediaStore.Provider>
+          <ModalStore.Provider>
+            <Component {...pageProps} />
+          </ModalStore.Provider>
+        </MediaStore.Provider>
       </>
     );
   }
