@@ -22,7 +22,10 @@ export default class MyApp extends App {
     return (
       <>
         <Head>
-          <title>Next App</title>
+          <meta charSet={"utf-8"} />
+          <meta name={"author"} content={"codyNog"} />
+          <meta name={"description"} content={"codyNogのwebサイト"} />
+          <title>codyNog{"'"}s Website</title>
         </Head>
         <MediaStore.Provider>
           <ModalStore.Provider>
