@@ -33,7 +33,7 @@ const Skill: React.FC<Props> = ({ src, title, style }) => {
   return (
     <Wrapper style={style}>
       <ImgWrapper>
-        <Img src={src} />
+        <Img src={src} alt={title} />
       </ImgWrapper>
       <Paragraph style={{ marginTop: spacing.XS }}>{title}</Paragraph>
     </Wrapper>
