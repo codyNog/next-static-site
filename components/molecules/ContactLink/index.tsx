@@ -28,7 +28,7 @@ interface Props {
 
 const ContactLink: React.FC<Props> = ({ src, href, title, style }) => {
   return (
-    <Wrapper href={href} target={"_blank"} style={style}>
+    <Wrapper href={href} target={"_blank"} rel={"noopener"} style={style}>
       <Icon src={src} alt={title} />
       <Link>{title}</Link>
     </Wrapper>
