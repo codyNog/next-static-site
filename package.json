@@ -9,7 +9,8 @@
     "next": "^9.2.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "ress": "^2.0.4"
+    "ress": "^2.0.4",
+    "unstated-next": "^1.1.0"
   },
   "scripts": {
     "dev": "next",

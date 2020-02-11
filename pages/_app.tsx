@@ -2,6 +2,7 @@ import App from "next/app";
 import Head from "next/head";
 import React from "react";
 import "ress";
+import ModalStore from "../store/global/modal";
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -22,7 +23,9 @@ export default class MyApp extends App {
         <Head>
           <title>Next App</title>
         </Head>
-        <Component {...pageProps} />
+        <ModalStore.Provider>
+          <Component {...pageProps} />
+        </ModalStore.Provider>
       </>
     );
   }
