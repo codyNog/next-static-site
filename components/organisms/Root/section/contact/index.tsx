@@ -59,13 +59,13 @@ const ContactSection: React.FC = () => {
             src={"/static/img/github.svg"}
             href={"https://github.com/codyNog"}
             title={"codyNog"}
-            style={{ marginTop: spacing.XS }}
+            style={{ marginLeft: spacing.XS }}
           />
           <ContactLink
             src={"/static/img/facebook.svg"}
             href={"https://www.facebook.com/kouki.yonemoto"}
             title={"Kohki Noguchi"}
-            style={{ marginTop: spacing.XS }}
+            style={{ marginLeft: spacing.XS }}
           />
         </Contact>
       </Container>

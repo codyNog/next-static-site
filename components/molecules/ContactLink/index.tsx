@@ -1,12 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { fontSize, whiteColor, spacing } from "../../../constrants/style";
+import { fontSize, whiteColor } from "../../../constrants/style";
 
 const Wrapper = styled.a({
-  width: 300,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
   color: whiteColor,
   fontSize: fontSize.L,
   textDecoration: "none"
@@ -14,10 +10,8 @@ const Wrapper = styled.a({
 
 const Icon = styled.img({
   border: "",
-  height: 30
+  height: 50
 });
-
-const Link = styled.span({ marginLeft: spacing.S });
 
 interface Props {
   src?: string;
@@ -30,7 +24,6 @@ const ContactLink: React.FC<Props> = ({ src, href, title, style }) => {
   return (
     <Wrapper href={href} target={"_blank"} rel={"noopener"} style={style}>
       <Icon src={src} alt={title} />
-      <Link>{title}</Link>
     </Wrapper>
   );
 };
