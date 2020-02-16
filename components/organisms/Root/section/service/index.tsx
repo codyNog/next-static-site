@@ -9,36 +9,7 @@ import { H2, H3 } from "../../../../atoms/Heading";
 import Skill from "../../../../molecules/Skill";
 import MediaStore from "../../../../../store/global/media";
 import Container from "../../../../atoms/Container";
-
-const Wrapper = styled.div({
-  color: whiteColor,
-  position: "relative",
-  padding: "50px 0",
-  ":before": {
-    content: "close-quote",
-    position: "absolute",
-    top: 0,
-    right: 0,
-    left: 0,
-    bottom: 0,
-    width: "100%",
-    height: "100%",
-    backgroundColor: primaryColor,
-    transform: "skewY(-5deg)"
-  },
-  ":after": {
-    content: "close-quote",
-    position: "absolute",
-    top: 0,
-    right: 0,
-    left: 0,
-    bottom: 0,
-    width: "100%",
-    height: "100%",
-    backgroundColor: primaryColor,
-    transform: "skewY(-5deg)"
-  }
-});
+import Sloped from "../../../../atoms/Sloped";
 
 const Skills = styled.div({
   marginTop: spacing.S,
@@ -51,7 +22,12 @@ const ServiceSection: React.FC = () => {
   const { isMobile } = MediaStore.useContainer();
 
   return (
-    <Wrapper>
+    <Sloped
+      color={whiteColor}
+      padding={"50px 0"}
+      backgroundColor={primaryColor}
+      transform={"skewY(-5deg)"}
+    >
       <Container>
         <H2>Service</H2>
         <H3 style={{ marginTop: spacing.M }}>FrontEnd</H3>
@@ -98,7 +74,7 @@ const ServiceSection: React.FC = () => {
           />
         </Skills>
       </Container>
-    </Wrapper>
+    </Sloped>
   );
 };
 

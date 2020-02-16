@@ -8,36 +8,7 @@ import {
 } from "../../../../../constrants/style";
 import { H2, H3 } from "../../../../atoms/Heading";
 import ContactLink from "../../../../molecules/ContactLink";
-
-const Wrapper = styled.div({
-  color: whiteColor,
-  position: "relative",
-  padding: "50px 0",
-  ":before": {
-    content: "close-quote",
-    position: "absolute",
-    top: 0,
-    right: 0,
-    left: 0,
-    bottom: 0,
-    width: "100%",
-    height: "100%",
-    backgroundColor: secondaryColor,
-    transform: "skewY(5deg)"
-  },
-  ":after": {
-    content: "close-quote",
-    position: "absolute",
-    top: 0,
-    right: 0,
-    left: 0,
-    bottom: 0,
-    width: "100%",
-    height: "100%",
-    backgroundColor: secondaryColor,
-    transform: "skewY(5deg)"
-  }
-});
+import Sloped from "../../../../atoms/Sloped";
 
 const Contact = styled.div({
   marginTop: spacing.S
@@ -45,7 +16,12 @@ const Contact = styled.div({
 
 const ContactSection: React.FC = () => {
   return (
-    <Wrapper>
+    <Sloped
+      color={whiteColor}
+      padding={"50px 0"}
+      backgroundColor={secondaryColor}
+      transform={"skewY(5deg)"}
+    >
       <Container>
         <H2>Contact</H2>
         <H3 style={{ marginTop: spacing.M }}>↓ご連絡はこちら↓</H3>
@@ -69,7 +45,7 @@ const ContactSection: React.FC = () => {
           />
         </Contact>
       </Container>
-    </Wrapper>
+    </Sloped>
   );
 };
 
