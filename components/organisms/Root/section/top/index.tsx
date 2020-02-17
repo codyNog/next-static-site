@@ -24,9 +24,7 @@ const Wrapper = styled.div({
 
 const Img = styled.img({
   marginTop: spacing.M,
-  maxWidth: 300,
-  minWidth: 200,
-  minHeight: 200,
+  width: 300,
   borderRadius: 4
 });
 
