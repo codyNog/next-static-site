@@ -17,6 +17,7 @@ const fontSize = {
 
 //spacing
 const spacing = {
+  L: 32,
   M: 24,
   S: 16,
   XS: 8

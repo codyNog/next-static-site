@@ -1,6 +1,6 @@
 import React from "react";
 import HamburgerMenu from "react-hamburger-menu";
-import { blackColor, whiteColor } from "../../../constrants/style";
+import { blackColor } from "../../../constrants/style";
 
 interface Props {
   isOpen: boolean;
@@ -16,7 +16,7 @@ const HamburgerButton: React.FC<Props> = ({ isOpen, onClick }) => {
       height={15}
       strokeWidth={1}
       rotate={0}
-      color={isOpen ? whiteColor : blackColor}
+      color={blackColor}
       borderRadius={0}
       animationDuration={0.5}
     />
