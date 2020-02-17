@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import HamburgerButton from "../../atoms/Hamburger";
 import ModalStore from "../../../store/global/modal";
 import { whiteColor } from "../../../constrants/style";
 
@@ -9,26 +10,39 @@ const Wrapper = styled.div({
   width: "100vw",
   padding: 40,
   position: "fixed",
-  zIndex: 1
-});
-
-const OpenMenuModal = styled.button({
-  outline: "none"
+  zIndex: 3
 });
 
 const Title = styled.div({
   color: whiteColor
 });
 
+const Right = styled.div({
+  marginLeft: "auto",
+  zIndex: 3
+});
+
 const Header: React.FC = () => {
-  const { openMenuModal } = ModalStore.useContainer();
+  const {
+    openMenuModal,
+    isMenuModalOpen,
+    closeModal
+  } = ModalStore.useContainer();
+
+  const toggle = () => {
+    if (isMenuModalOpen()) {
+      closeModal();
+    } else {
+      openMenuModal();
+    }
+  };
 
   return (
     <Wrapper>
       <Title>codyNog{"'"}s Website</Title>
-      <OpenMenuModal onClick={openMenuModal} style={{ marginLeft: "auto" }}>
-        open
-      </OpenMenuModal>
+      <Right>
+        <HamburgerButton isOpen={isMenuModalOpen()} onClick={toggle} />
+      </Right>
     </Wrapper>
   );
 };

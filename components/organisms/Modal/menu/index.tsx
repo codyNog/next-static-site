@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
+import Link from "next/link";
+import { whiteColor, fontSize } from "../../../../constrants/style";
+import ModalStore from "../../../../store/global/modal";
 
 const Wrapper = styled.div({
   position: "fixed",
@@ -8,20 +11,57 @@ const Wrapper = styled.div({
   alignItems: "center",
   justifyContent: "center",
   zIndex: 2,
-  backgroundColor: "blue",
+  backgroundColor: "rgba(0, 0, 0, 0.26)",
   height: "100vh",
   width: "100vw"
 });
 
 const Window = styled.div({
-  backgroundColor: "white",
+  backgroundColor: whiteColor,
   padding: 8
 });
 
+const Ul = styled.ul({
+  listStyle: "none"
+});
+
+const Li = styled.li({
+  fontSize: fontSize.L
+});
+
+const A = styled.a({ textDecoration: "none" });
+
+interface MenuLink {
+  href: string;
+  title: string;
+}
+
+const menuLinks: MenuLink[] = [
+  { href: "#profile", title: "Profile" },
+  { href: "#service", title: "Service" },
+  { href: "#works", title: "Works" },
+  { href: "#contact", title: "Contact" }
+];
+
 const MenuModal: React.FC = () => {
+  const { closeModal } = ModalStore.useContainer();
+
   return (
     <Wrapper>
-      <Window>modal</Window>
+      <Window>
+        <Ul>
+          {menuLinks.map(elem => {
+            const { href, title } = elem;
+            return (
+              <Li key={href}>
+                <Link href={href}>
+                  <A onClick={closeModal}>{title}</A>
+                </Link>
+              </Li>
+            );
+          })}
+        </Ul>
+      </Window>
     </Wrapper>
   );
 };

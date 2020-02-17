@@ -6,6 +6,10 @@ type ModalState = "close" | "menu";
 const useModal = () => {
   const [modalState, setModalState] = useState<ModalState>("close");
 
+  const closeModal = () => {
+    setModalState("close");
+  };
+
   const openMenuModal = () => {
     setModalState("menu");
   };
@@ -14,7 +18,7 @@ const useModal = () => {
     return modalState === "menu";
   };
 
-  return { openMenuModal, isMenuModalOpen };
+  return { closeModal, openMenuModal, isMenuModalOpen };
 };
 
 const ModalStore = createContainer(useModal);

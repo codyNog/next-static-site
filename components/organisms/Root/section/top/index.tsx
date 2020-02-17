@@ -57,7 +57,7 @@ const history: JobHistory[] = [
 
 const TopSection: React.FC = () => {
   return (
-    <Wrapper>
+    <Wrapper id={"#profile"}>
       <Container>
         <H2>Profile</H2>
         <Img src={"/static/img/profile.jpg"} alt={"my pic"} />

@@ -11,7 +11,7 @@ const Wrapper = styled.div({
 
 const WorksSection: React.FC = () => {
   return (
-    <Wrapper>
+    <Wrapper id={"works"}>
       <Container>
         <H2>Works</H2>
         <H3 style={{ marginTop: spacing.M }}>To Be Released...</H3>

@@ -23,6 +23,7 @@ const ServiceSection: React.FC = () => {
 
   return (
     <Sloped
+      id={"#service"}
       color={whiteColor}
       padding={"50px 0"}
       backgroundColor={primaryColor}

@@ -17,6 +17,7 @@ const Contact = styled.div({
 const ContactSection: React.FC = () => {
   return (
     <Sloped
+      id={"#contact"}
       color={whiteColor}
       padding={"50px 0"}
       backgroundColor={secondaryColor}
