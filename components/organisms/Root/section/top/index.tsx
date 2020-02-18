@@ -1,6 +1,11 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { darkColor, spacing, fontSize } from "../../../../../constrants/style";
+import {
+  darkColor,
+  spacing,
+  whiteColor,
+  fontSize
+} from "../../../../../constrants/style";
 import Container from "../../../../atoms/Container";
 import { H2, H3 } from "../../../../atoms/Heading";
 import Paragraph from "../../../../atoms/Paragraph";
@@ -41,7 +46,6 @@ const Job = styled.div({
 });
 
 const Term = styled.span({
-  //fontSize: fontSize.XS,
   textAlign: "right",
   marginRight: spacing.XS
 });
@@ -49,6 +53,14 @@ const Term = styled.span({
 const ProfParagraph = styled(Paragraph)({
   marginTop: spacing.S,
   textAlign: "center"
+});
+
+const Title = styled.h1({
+  position: "absolute",
+  fontSize: fontSize.M,
+  fontWeight: "normal",
+  color: whiteColor,
+  top: 40
 });
 
 interface JobHistory {
@@ -65,6 +77,7 @@ const history: JobHistory[] = [
 const TopSection: React.FC = () => {
   return (
     <Wrapper id={"profile"}>
+      <Title>codyNog{"'"}s Website</Title>
       <Container>
         <H2>Profile</H2>
         <Img src={"/static/img/profile.jpg"} alt={"my pic"} />

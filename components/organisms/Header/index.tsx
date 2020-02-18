@@ -2,7 +2,6 @@ import React from "react";
 import styled from "@emotion/styled";
 import HamburgerButton from "../../atoms/Hamburger";
 import ModalStore from "../../../store/global/modal";
-import { whiteColor } from "../../../constrants/style";
 
 const Wrapper = styled.div({
   display: "flex",
@@ -11,10 +10,6 @@ const Wrapper = styled.div({
   padding: 40,
   position: "fixed",
   zIndex: 3
-});
-
-const Title = styled.div({
-  color: whiteColor
 });
 
 const Right = styled.div({
@@ -39,7 +34,6 @@ const Header: React.FC = () => {
 
   return (
     <Wrapper>
-      <Title>codyNog{"'"}s Website</Title>
       <Right>
         <HamburgerButton isOpen={isMenuModalOpen()} onClick={toggle} />
       </Right>

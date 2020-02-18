@@ -10,7 +10,7 @@ const fontSize = {
   XXL: 48,
   XL: 32,
   L: 24,
-  M: 16,
+  M: 14,
   S: 12,
   XS: 8
 };
