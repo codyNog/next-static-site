@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { darkColor, spacing } from "../../../../../constrants/style";
+import { darkColor, spacing, fontSize } from "../../../../../constrants/style";
 import Container from "../../../../atoms/Container";
 import { H2, H3 } from "../../../../atoms/Heading";
 import Paragraph from "../../../../atoms/Paragraph";
@@ -12,10 +12,12 @@ const Wrapper = styled.div({
   "&:before": {
     content: "close-quote",
     position: "absolute",
-    top: 0,
+    top: -8,
     left: 0,
     width: 1200,
-    height: 180,
+    height: "20vh",
+    maxHeight: 180,
+    minHeight: 70,
     backgroundColor: darkColor,
     transform: "rotate(-15deg)",
     transformOrigin: "left bottom"
@@ -29,17 +31,24 @@ const Img = styled.img({
 });
 
 const History = styled.div({
+  fontSize: fontSize.S,
   marginTop: spacing.S
 });
 
 const Job = styled.div({
-  display: "flex"
+  display: "flex",
+  alignItems: "center"
 });
 
 const Term = styled.span({
-  width: 160,
+  //fontSize: fontSize.XS,
   textAlign: "right",
   marginRight: spacing.XS
+});
+
+const ProfParagraph = styled(Paragraph)({
+  marginTop: spacing.S,
+  textAlign: "center"
 });
 
 interface JobHistory {
@@ -48,7 +57,7 @@ interface JobHistory {
 }
 
 const history: JobHistory[] = [
-  { term: "2019/12", company: "JX Press" },
+  { term: "2019/12 -", company: "JX Press" },
   { term: "2019/07 - 2019/11", company: "LocalWorks Inc." },
   { term: "2018/07 - 2019/06", company: "Xenoma Inc." }
 ];
@@ -60,9 +69,14 @@ const TopSection: React.FC = () => {
         <H2>Profile</H2>
         <Img src={"/static/img/profile.jpg"} alt={"my pic"} />
         <H3 style={{ marginTop: spacing.S }}>Kohki Noguchi / codyNog</H3>
-        <Paragraph style={{ marginTop: spacing.S, width: 300 }}>
-          フロントエンドエンジニア。ReactとTypeScriptでやっていきたい。
-        </Paragraph>
+        <ProfParagraph>
+          フロントエンドエンジニア。
+          <br />
+          Reactベースのフレームワークを使ったWebサービスの開発を行っている。
+        </ProfParagraph>
+        <ProfParagraph>
+          個人ではPWAやクロスプラットフォームのスマホアプリ、WebサイトのUXデザインなどを受託している。
+        </ProfParagraph>
         <H3 style={{ marginTop: spacing.S }}>Job History</H3>
         <History>
           {history.map((elem, i) => {

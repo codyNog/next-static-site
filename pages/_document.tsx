@@ -11,6 +11,7 @@ const Body = styled.body({
   width: "100vw",
   overflow: "hidden scroll",
   color: blackColor,
+  fontSize: 14,
   backgroundColor: whiteColor,
   margin: 0
 });

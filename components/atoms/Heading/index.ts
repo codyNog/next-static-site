@@ -4,8 +4,8 @@ import { fontSize } from "../../../constrants/style";
 const H1 = styled.h1({});
 
 const H2 = styled.h2({
-  fontSize: fontSize.XL,
-  letterSpacing: 2
+  fontSize: fontSize.L,
+  letterSpacing: 1
 });
 
 const H3 = styled.h3({
