@@ -13,7 +13,6 @@ const Wrapper = styled.div({
   alignItems: "center",
   justifyContent: "center",
   zIndex: 2,
-  //backgroundColor: "rgba(0, 0, 0, 0.26)",
   height: "100vh",
   width: "100vw"
 });
@@ -29,7 +28,8 @@ const Ul = styled.ul({
 });
 
 const Li = styled.li({
-  fontSize: fontSize.L
+  fontSize: fontSize.L,
+  cursor: "pointer"
 });
 
 const A = styled.a({ textDecoration: "none" });
