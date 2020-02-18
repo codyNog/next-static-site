@@ -25,6 +25,7 @@ export default class MyApp extends App {
           <meta charSet={"utf-8"} />
           <meta name={"author"} content={"codyNog"} />
           <meta name={"description"} content={"codyNogのwebサイト"} />
+          <link rel={"preload"} href={"/static/img/profile.jpg"} as={"image"} />
           <title>codyNog{"'"}s Website</title>
         </Head>
         <MediaStore.Provider>
